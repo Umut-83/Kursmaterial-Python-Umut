@@ -75,10 +75,10 @@
 
 
 #Array, Schleifen, Eingaben & Ausgaben 
-musik_list = []
+
 
     
-
+music_list = []
 while True :
     # text_option_1 = "#1. Füge einen Song hinzu."
     # text_option_2 = "#2. Gebe einen Song aus."
@@ -90,8 +90,8 @@ while True :
     #       """)
     print("""
           #1. Füge einen Song hinzu.
-          #2. Gebe einen Song aus.
-          #3. Lösche einen Song.
+          #2. Lösche einen Song.
+          #3. Ausgabe von allen bisherigen
           """)
     #eingabe für die optionsauswahl
     user_choice = input("Wähle die entsprechende Option aus [1|2|3]\n")
@@ -128,12 +128,25 @@ while True :
             print("Beende Programm")
             break
         
-        musik_list.append(song)
+        music_list.append(song)
         
         print("✅")
     elif user_choice.lower() == "quit":
             print("Beende Programm")
             break
-    
+    elif user_choice == "2":
+        #user kann zu löschenden song eingeben
+        song_to_delete = input("Welchen Song möchtest löschen?\n") #The Fray - How to a save life.mp3 
+        print(f"Der löschende Suchbegriff {song_to_delete}")
+        #Liste muss durchsucht werden
+        #[alle songs]
+        for song in music_list:
+            #Nehme den erste Song aus der Liste der passend ist zum Suchbegriff raus
+            if song_to_delete in song:
+                print(song_to_delete)
+                music_list.remove(song)  #The Fray  != 'The Fray - How to save a life.mp3'
+            
+    elif user_choice == "3":            
+        print(music_list)
 
 
