@@ -5,17 +5,61 @@
 #
 # 0. Leeres Wörterbuch anlegen: phonebook = {}
 # 1. Der Benutzer gibt 3 Namen und Telefonnummern ein (OHNE Schleife)
-# 2. Jeder Eintrag wird im Wörterbuch gespeichert
-# 3. Gib das gesamte Telefonbuch aus
-# 4. Frage den Benutzer nach einem Namen und gib die dazugehörige Nummer aus
-#
-# BEISPIEL:
-# Eingabe: Name = "Anna", Nummer = "0123456789"
-# Eingabe: Name = "Ben", Nummer = "9876543210"
-# Eingabe: Name = "Clara", Nummer = "5551234567"
-# Ausgabe: Telefonbuch: {'Anna': '0123456789', 'Ben': '9876543210', 'Clara': '5551234567'}
-# Suche: "Anna" -> Anna hat die Nummer 0123456789
-#
+# # 2. Jeder Eintrag wird im Wörterbuch gespeichert
+# # 3. Gib das gesamte Telefonbuch aus
+# # 4. Frage den Benutzer nach einem Namen und gib die dazugehörige Nummer aus
+# #
+# # BEISPIEL:
+# # Eingabe: Name = "Anna", Nummer = "0123456789"
+# # Eingabe: Name = "Ben", Nummer = "9876543210"
+# # Eingabe: Name = "Clara", Nummer = "5551234567"
+# # Ausgabe: Telefonbuch: {'Anna': '0123456789', 'Ben': '9876543210', 'Clara': '5551234567'}
+# # Suche: "Anna" -> Anna hat die Nummer 0123456789
+# #
+# default_user = {
+#     "username": "SQZ0111",
+#     "isActive": False,
+#     #"repositories": ["https://abc.com"]
+#     "lastSeen": "today"
+    
+# }
+
+# #for key,value default_user.items():
+#     #das dictionary nur gelesen oder vorhandene Einträge verändert werden
+
+# # 0. Leeres Wörterbuch anlegen
+# phonebook = {}  
+   
+# while True:
+#     # 1. Der Benutzer gibt den Namen ein
+#     name = input("Name der Person. To exit type [q].\n>>>")
+#     if name.lower() == "q":
+#         break
+    
+#     # Der Benutzer gibt die dazugehörige Nummer ein
+#     nummer = input(f"Telefonnummer für {name}.\n>>>")
+    
+#     # 2. Jeder Eintrag wird im Wörterbuch gespeichert
+#     phonebook[name] = nummer
+            
+
+# # 3. Gib das gesamte Telefonbuch aus
+# print("Telefonbuch:", phonebook)
+
+# # default_user["isActive"] = True
+# # default_user["hasAccess"] = False
+            
+# print(default_user)
+
+# # 4. Frage den Benutzer nach einem Namen und gib die dazugehörige Nummer aus
+# suche = input("Nach welchem Namen möchtest du suchen?\n>>>")
+# if suche in phonebook:
+#     print(f"{suche} hat die Nummer {phonebook[suche]}")
+# else:
+#     print(f"{suche} wurde nicht gefunden.")
+
+
+
 
 #
 # AUFGABE 2: NOTENSPEICHER (SEHR EINFACH)
@@ -51,29 +95,52 @@
 # BEISPIEL:
 # Länder: Deutschland, Frankreich, Italien
 # Eingabe: "Deutschland" -> Die Hauptstadt von Deutschland ist Berlin
-# Eingabe: "Spanien" -> Spanien nicht gefunden
-#
+# # Eingabe: "Spanien" -> Spanien nicht gefunden
+# #
 
-#
+# # 0. Wörterbuch mit 3 Ländern erstellen
+# countries = {"Deutschland": "Berlin", "Frankreich": "Paris", "Italien": "Rom"}
+
+# # 1. Gib dem Benutzer die Auswahl: Zeige alle Länder an
+# # .keys() holt die Ländernamen, ", ".join() verbindet sie lesbar mit Komma
+# print("Verfügbare Länder:", ", ".join(countries.keys()))
+
+# # 2. Der Benutzer gibt ein Land ein
+# eingabe = input("Bitte gib ein Land ein: ")
+
+# # 3. & 4. Prüfen, ob das Land existiert und passende Nachricht ausgeben
+# if eingabe in countries:
+#     hauptstadt = countries[eingabe]
+#     print(f"Die Hauptstadt von {eingabe} ist {hauptstadt}.")
+# else:
+#     print(f"{eingabe} nicht gefunden.")
+
+
 # AUFGABE 4: WÖRTERBUCH ERWEITERN (SEHR EINFACH)
 #
 # Starte mit einem leeren Wörterbuch und füge nach und nach Einträge hinzu.
 #
-# 0. Leeres Wörterbuch anlegen: my_dict = {}
-# 1. Füge 3 Schlüssel-Wert-Paare hinzu (ohne Benutzereingabe, direkt im Code)
-#    TIPP: my_dict["key1"] = "value1"
-# 2. Ändere den Wert von einem Schlüssel
-#    TIPP: my_dict["key1"] = "neuer_wert"
-# 3. Lösche einen Schlüssel mit del
-#    TIPP: del my_dict["key2"]
-# 4. Gib das fertige Wörterbuch aus
-#
-# BEISPIEL:
-# Start: {}
-# Nach Hinzufügen: {"name": "Anna", "alter": 25, "stadt": "Berlin"}
-# Nach Ändern: {"name": "Anna", "alter": 26, "stadt": "Berlin"}
-# Nach Löschen: {"name": "Anna", "stadt": "Berlin"}
-#
+# # 0. Leeres Wörterbuch anlegen: my_dict = {}
+# my_dict = {}
+
+# # 1. Füge 3 Schlüssel-Wert-Paare hinzu (ohne Benutzereingabe, direkt im Code)
+# #    TIPP: my_dict["key1"] = "value1"
+# my_dict["name"] = "Anna"
+# my_dict["alter"] = 25
+# my_dict["stadt"] = "Berlin"
+
+# # 2. Ändere den Wert von einem Schlüssel
+# #    TIPP: my_dict["key1"] = "neuer_wert"
+# my_dict["alter"] = 26
+
+# # 3. Lösche einen Schlüssel mit del
+# #    TIPP: del my_dict["key2"]
+# del my_dict["alter"]
+
+# # 4. Gib das fertige Wörterbuch aus
+# print(my_dict)
+
+
 
 #
 # AUFGABE 5: EINKAUFSZETTEL (EINFACH MIT SCHLEIFE)
@@ -97,6 +164,49 @@
 # Welches Produkt? "Milch"
 # Neuer Einkaufszettel: Äpfel: 3, Brot: 2
 #
+
+# AUFGABE 5: EINKAUFSZETTEL (EINFACH MIT SCHLEIFE)
+#
+# Erstelle ein Wörterbuch für einen Einkaufszettel. Der Benutzer kann Produkte und Mengen eingeben.
+#
+# 0. Leeres Wörterbuch: shopping_list = {}
+shopping_list = {}
+
+# 1. Schleife für die Eingabe (3 Durchgänge)
+# range(3) sorgt dafür, dass die Schleife genau 3-mal läuft (von 0 bis 2)
+for i in range(3):
+    print(f"\n--- {i+1}. Produkt ---")
+    # 2. Pro Durchgang: Produktname und Menge eingeben
+    produkt = input("Produktname: ")
+    # Da eine Menge eine Zahl ist, wandeln wir sie direkt in ein Integer (int) um
+    menge = int(input("Menge: "))
+    
+    # 3. Speichere im Wörterbuch: shopping_list[produkt] = menge
+    shopping_list[produkt] = menge
+
+# 4. Nach der Schleife: Gib den gesamten Einkaufszettel aus
+print("\nEinkaufszettel:", shopping_list)
+
+# 5. Frage den Benutzer, ob er ein Produkt löschen möchte (ja/nein)
+loeschen_antwort = input("\nMöchtest du ein Produkt löschen? (ja/nein): ").lower()
+
+# 6. Wenn ja: Produktname eingeben und aus Wörterbuch löschen
+if loeschen_antwort == "ja":
+    loesch_produkt = input("Welches Produkt soll gelöscht werden? ")
+    
+    # Sichergehen, dass das Produkt auch wirklich auf dem Zettel steht
+    if loesch_produkt in shopping_list:
+        del shopping_list[loesch_produkt]
+        print(f"\n{loesch_produkt} wurde gelöscht.")
+    else:
+        print(f"\n{loesch_produkt} steht nicht auf dem Einkaufszettel.")
+
+# Zum Schluss den aktualisierten Zettel anzeigen
+print("Neuer Einkaufszettel:", shopping_list)
+
+
+
+
 
 #
 # ALLGEMEINE TIPS FÜR ALLE AUFGABEN:
