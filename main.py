@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # #==================================THEMA: DICTIONARIES==================================
 # #
 # # AUFGABE 1: TELEFONBUCH (SEHR EINFACH)
@@ -763,6 +764,8 @@ def bestaetigung(prompt: str) -> bool:
 # - Import: https://docs.python.org/3/reference/import.html
 
 
+=======
+>>>>>>> 455cc34f222e4f0b63461248bf631f53feb1ad64
 #===============================================================================================================================================================
 # AUFGABE: PASSWORTGENERATOR MIT BENUTZERVERWALTUNG /MIT FUNKTIONEN)
 #
