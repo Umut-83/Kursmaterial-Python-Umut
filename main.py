@@ -342,128 +342,128 @@
 # else:
 #     print("Ungültige Operation! Bitte nutze nur +, - oder *.")
 
-# # #
-# # # AUFGABE 6: STANDARDWERTE (EINFACH)
-# # #
-# # # Schreibe eine Funktion mit Standardwerten für Parameter.
-# # #
-# # # 0. Definiere die Funktion: def begruessung(name, anrede="Hallo"):
-# # # 1. Die Funktion gibt "[anrede] [name]!" aus
-# # # 2. Rufe die Funktion auf:
-# # #    2.a Mit nur einem Parameter (name) -> Standardwert "Hallo" wird verwendet
-# # #    2.b Mit zwei Parametern (name, anrede) -> Eigener Wert wird verwendet
-# # #
-# # # BEISPIEL:
-# # # begruessung("Anna") -> Hallo Anna!
-# # # begruessung("Ben", "Guten Morgen") -> Guten Morgen Ben!
-# # #
-
-# # #
-# # # AUFGABE 7: LISTE DURCHGEHEN (MITTEL)
-# # #
-# # # # Schreibe eine Funktion, die eine Liste von Zahlen als Parameter nimmt
-# # # # und den Durchschnitt berechnet.
 # # # #
-# # # # 0. Definiere die Funktion: def durchschnitt(zahlen_liste):
-# # # # 1. Die Funktion berechnet den Durchschnitt mit sum() und len()
-# # # # 2. Die Funktion gibt den Durchschnitt zurück
-# # # # 3. Erstelle eine Liste mit 5 Zahlen (OHNE Benutzereingabe)
-# # # # 4. Rufe die Funktion mit der Liste auf
-# # # # 5. Gib den Durchschnitt aus
+# # # # AUFGABE 6: STANDARDWERTE (EINFACH)
 # # # #
-# # # BEISPIEL:
-# # # Liste: [4, 5, 6, 7, 8] -> Durchschnitt: 6.0
-# # # Liste: [10, 20, 30, 40, 50] -> Durchschnitt: 30.0
-# # #
+# # # # Schreibe eine Funktion mit Standardwerten für Parameter.
+# # # #
+# # # # 0. Definiere die Funktion: def begruessung(name, anrede="Hallo"):
+# # # # 1. Die Funktion gibt "[anrede] [name]!" aus
+# # # # 2. Rufe die Funktion auf:
+# # # #    2.a Mit nur einem Parameter (name) -> Standardwert "Hallo" wird verwendet
+# # # #    2.b Mit zwei Parametern (name, anrede) -> Eigener Wert wird verwendet
+# # # #
+# # # # BEISPIEL:
+# # # # begruessung("Anna") -> Hallo Anna!
+# # # # begruessung("Ben", "Guten Morgen") -> Guten Morgen Ben!
+# # # #
 
-# # # AUFGABE 8: MEHRERE RÜCKGABEWERTE (MITTEL)
-# # #
-# # # Schreibe eine Funktion, die mehrere Werte zurückgibt.
-# # #
-# # # 0. Definiere die Funktion: def min_max(zahlen_liste):
-# def min_max(zahlen_liste):
-#     # 1. Die Funktion berechnet das Minimum und Maximum der Liste
-#     #    TIPP: min() und max() Funktionen verwenden
-#     min_wert = min(zahlen_liste)
-#     max_wert = max(zahlen_liste)
+# # # #
+# # # # AUFGABE 7: LISTE DURCHGEHEN (MITTEL)
+# # # #
+# # # # # Schreibe eine Funktion, die eine Liste von Zahlen als Parameter nimmt
+# # # # # und den Durchschnitt berechnet.
+# # # # #
+# # # # # 0. Definiere die Funktion: def durchschnitt(zahlen_liste):
+# # # # # 1. Die Funktion berechnet den Durchschnitt mit sum() und len()
+# # # # # 2. Die Funktion gibt den Durchschnitt zurück
+# # # # # 3. Erstelle eine Liste mit 5 Zahlen (OHNE Benutzereingabe)
+# # # # # 4. Rufe die Funktion mit der Liste auf
+# # # # # 5. Gib den Durchschnitt aus
+# # # # #
+# # # # BEISPIEL:
+# # # # Liste: [4, 5, 6, 7, 8] -> Durchschnitt: 6.0
+# # # # Liste: [10, 20, 30, 40, 50] -> Durchschnitt: 30.0
+# # # #
+
+# # # # AUFGABE 8: MEHRERE RÜCKGABEWERTE (MITTEL)
+# # # #
+# # # # Schreibe eine Funktion, die mehrere Werte zurückgibt.
+# # # #
+# # # # 0. Definiere die Funktion: def min_max(zahlen_liste):
+# # def min_max(zahlen_liste):
+# #     # 1. Die Funktion berechnet das Minimum und Maximum der Liste
+# #     #    TIPP: min() und max() Funktionen verwenden
+# #     min_wert = min(zahlen_liste)
+# #     max_wert = max(zahlen_liste)
     
-#     # 2. Die Funktion gibt beide Werte zurück (TIPP: return min_wert, max_wert)
-#     return min_wert, max_wert
+# #     # 2. Die Funktion gibt beide Werte zurück (TIPP: return min_wert, max_wert)
+# #     return min_wert, max_wert
 
-# # 3. Erstelle eine Liste mit beliebigen Zahlen
-# # BEISPIEL 1:
-# liste_beispiel_1 = [5, 2, 8, 1, 9]
+# # # 3. Erstelle eine Liste mit beliebigen Zahlen
+# # # BEISPIEL 1:
+# # liste_beispiel_1 = [5, 2, 8, 1, 9]
 
-# # 4. Rufe die Funktion auf und speichere beide Rückgabewerte
-# minimum_1, maximum_1 = min_max(liste_beispiel_1)
+# # # 4. Rufe die Funktion auf und speichere beide Rückgabewerte
+# # minimum_1, maximum_1 = min_max(liste_beispiel_1)
 
-# # 5. Gib Minimum und Maximum aus
-# print(f"Liste: {liste_beispiel_1} -> Minimum: {minimum_1}, Maximum: {maximum_1}")
-
-
-# # BEISPIEL 2:
-# liste_beispiel_2 = [3.5, 2.1, 7.8, 4.2]
-
-# # 4. Rufe die Funktion auf und speichere beide Rückgabewerte (für das zweite Beispiel)
-# minimum_2, maximum_2 = min_max(liste_beispiel_2)
-
-# # 5. Gib Minimum und Maximum aus (für das zweite Beispiel)
-# print(f"Liste: {liste_beispiel_2} -> Minimum: {minimum_2}, Maximum: {maximum_2}")
+# # # 5. Gib Minimum und Maximum aus
+# # print(f"Liste: {liste_beispiel_1} -> Minimum: {minimum_1}, Maximum: {maximum_1}")
 
 
+# # # BEISPIEL 2:
+# # liste_beispiel_2 = [3.5, 2.1, 7.8, 4.2]
+
+# # # 4. Rufe die Funktion auf und speichere beide Rückgabewerte (für das zweite Beispiel)
+# # minimum_2, maximum_2 = min_max(liste_beispiel_2)
+
+# # # 5. Gib Minimum und Maximum aus (für das zweite Beispiel)
+# # print(f"Liste: {liste_beispiel_2} -> Minimum: {minimum_2}, Maximum: {maximum_2}")
+
+
+# # #
+# # AUFGABE 9: FUNKTION MIT SCHLEIFE (MITTEL)
 # #
-# AUFGABE 9: FUNKTION MIT SCHLEIFE (MITTEL)
-#
-# Schreibe eine Funktion, die eine Liste von Namen bekommt
-# und jeden Namen mit einer Begrüßung ausgibt.
-#
-# 0. Definiere die Funktion: def begruesse_alle(namen_liste):
-# 1. Die Funktion geht mit einer for-Schleife durch die Liste
-# 2. Für jeden Namen wird "Hallo [name]!" ausgegeben
-# 3. Erstelle eine Liste mit 5 Namen (OHNE Benutzereingabe)
-# 4. Rufe die Funktion mit der Liste auf
-#
-# BEISPIEL:
-# Liste: ["Anna", "Ben", "Clara", "David", "Emma"]
-# Ausgabe:
-# Hallo Anna!
-# Hallo Ben!
-# Hallo Clara!
-# Hallo David!
-# Hallo Emma!
-#
-
-# # AUFGABE 10: FUNKTIONEN ZUSAMMENSETZEN (SCHWER)
+# # Schreibe eine Funktion, die eine Liste von Namen bekommt
+# # und jeden Namen mit einer Begrüßung ausgibt.
 # #
-# # Schreibe mehrere kleine Funktionen, die zusammen ein Programm ergeben.
+# # 0. Definiere die Funktion: def begruesse_alle(namen_liste):
+# # 1. Die Funktion geht mit einer for-Schleife durch die Liste
+# # 2. Für jeden Namen wird "Hallo [name]!" ausgegeben
+# # 3. Erstelle eine Liste mit 5 Namen (OHNE Benutzereingabe)
+# # 4. Rufe die Funktion mit der Liste auf
 # #
-# # 0. Definiere die Funktionen:
-# #    0.a def eingabe_zahl(prompt): gibt input als float zurück
-def eingabe_zahl(prompt):
-    return float(input(prompt))
+# # BEISPIEL:
+# # Liste: ["Anna", "Ben", "Clara", "David", "Emma"]
+# # Ausgabe:
+# # Hallo Anna!
+# # Hallo Ben!
+# # Hallo Clara!
+# # Hallo David!
+# # Hallo Emma!
+# #
 
-# #    0.b def berechne_flaeche(breite, hoehe): gibt breite * hoehe zurück
-def berechne_flaeche(breite, hoehe):
-    return breite * hoehe
+# # # AUFGABE 10: FUNKTIONEN ZUSAMMENSETZEN (SCHWER)
+# # #
+# # # Schreibe mehrere kleine Funktionen, die zusammen ein Programm ergeben.
+# # #
+# # # 0. Definiere die Funktionen:
+# # #    0.a def eingabe_zahl(prompt): gibt input als float zurück
+# def eingabe_zahl(prompt):
+#     return float(input(prompt))
 
-# #    0.c def ausgabe(flaeche): gibt "Die Fläche ist: [flaeche]" aus
-def ausgabe(flaeche):
-    print(f"Die Fläche ist: {flaeche}")
+# # #    0.b def berechne_flaeche(breite, hoehe): gibt breite * hoehe zurück
+# def berechne_flaeche(breite, hoehe):
+#     return breite * hoehe
 
-# # 1. Rufe die Funktionen in der richtigen Reihenfolge auf:
-# #    1.a Breite mit eingabe_zahl() einlesen
-breite_eingabe = eingabe_zahl("Breite: ")
+# # #    0.c def ausgabe(flaeche): gibt "Die Fläche ist: [flaeche]" aus
+# def ausgabe(flaeche):
+#     print(f"Die Fläche ist: {flaeche}")
 
-# #    1.b Höhe mit eingabe_zahl() einlesen
-hoehe_eingabe = eingabe_zahl("Höhe: ")
+# # # 1. Rufe die Funktionen in der richtigen Reihenfolge auf:
+# # #    1.a Breite mit eingabe_zahl() einlesen
+# breite_eingabe = eingabe_zahl("Breite: ")
 
-# #    1.c Fläche mit berechne_flaeche() berechnen
-ergebnis_flaeche = berechne_flaeche(breite_eingabe, hoehe_eingabe)
+# # #    1.b Höhe mit eingabe_zahl() einlesen
+# hoehe_eingabe = eingabe_zahl("Höhe: ")
 
-# #    1.d Ergebnis mit ausgabe() anzeigen
-ausgabe(ergebnis_flaeche)
-#
-# 
+# # #    1.c Fläche mit berechne_flaeche() berechnen
+# ergebnis_flaeche = berechne_flaeche(breite_eingabe, hoehe_eingabe)
+
+# # #    1.d Ergebnis mit ausgabe() anzeigen
+# ausgabe(ergebnis_flaeche)
+# #
+# # 
 
 #
 
@@ -550,6 +550,65 @@ ausgabe(ergebnis_flaeche)
 # if hilfe.bestaetigung("Speichern? "):
 #     daten.speichere_daten("zahlen.txt", {"zahl1": zahl1})
 #
+#
+# AUFGABE 1: EINFACHE MODULARISIERUNG (EINFACH)
+#
+# Lagere einfache Funktionen in separate Module aus.
+#
+# 1. Erstelle die Datei 'rechner.py' mit folgenden Funktionen:
+#    1.a def addieren(a: float, b: float) -> float:
+#    1.b def subtrahieren(a: float, b: float) -> float:
+#    1.c def multiplizieren(a: float, b: float) -> float:
+#    1.d def dividieren(a: float, b: float) -> float:
+#         TIPP: Bei Division durch 0 eine Fehlermeldung ausgeben
+
+def addieren(a: float, b: float) -> float:
+    return a + b
+
+def subtrahieren(a: float, b: float) -> float:
+    return a - b
+
+def multiplizieren(a: float, b: float) -> float:
+    return a * b
+
+def dividieren(a: float, b: float) -> float:
+    if b == 0:
+        print("Fehler: Division durch Null ist nicht erlaubt!")
+        return 0.0
+    return a / b
+
+
+#
+# AUFGABE 2: MEHRERE MODULE (MITTEL)
+#
+# Erstelle drei Module mit verschiedenen Funktionalitäten.
+#
+# 1. Erstelle 'hilfe.py' mit:
+#    1.a def zeige_menu() -> None:
+#         Gibt ein Menü aus
+#    1.b def eingabe_zahl(prompt: str) -> float:
+#         Nimmt eine Zahl als input und gibt sie als float zurück
+#    1.c def bestaetigung(prompt: str) -> bool:
+#         Gibt True zurück bei "ja", sonst False
+#         TIPP: Verwende .lower() für die Eingabe
+
+def zeige_menu() -> None:
+    print("\n--- HAUPTMENÜ ---")
+    print("1. Rechner starten")
+    print("2. Zahl speichern")
+    print("3. Beenden")
+
+def eingabe_zahl(prompt: str) -> float:
+    while True:
+        try:
+            return float(input(prompt))
+        except ValueError:
+            print("Ungültige Eingabe! Bitte eine Zahl eingeben.")
+
+def bestaetigung(prompt: str) -> bool:
+    antwort = input(prompt).lower().strip()
+    return antwort in ["ja", "j", "yes", "y"]
+
 
 #
 # AUFGABE 3: DATENBANK-MODUL MIT TYPE ANNOTATIONS (MITTEL)
