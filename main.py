@@ -763,8 +763,6 @@ def bestaetigung(prompt: str) -> bool:
 # - Import: https://docs.python.org/3/reference/import.html
 
 
-
-
 #===============================================================================================================================================================
 # AUFGABE: PASSWORTGENERATOR MIT BENUTZERVERWALTUNG /MIT FUNKTIONEN)
 #
@@ -780,6 +778,8 @@ def bestaetigung(prompt: str) -> bool:
 # ZIEL: Ein Programm zur Benutzerverwaltung mit automatischem Passwortgenerator
 #
 
+
+#===============================================================================================================================================================
 # ==================================================================================
 # MODUL 1: PASSWORTGENERATOR (passwort_generator.py)
 # ==================================================================================
@@ -791,6 +791,8 @@ def bestaetigung(prompt: str) -> bool:
 # - import random
 # - import string
 #
+import random
+import string
 
 def generiere_passwort(laenge: int = 8) -> str:
     """
@@ -815,6 +817,9 @@ def generiere_passwort(laenge: int = 8) -> str:
     >>> generiere_passwort(12)
     'b4n8q2w5e1r6'
     """
+    zeichen = string.ascii_lowercase + string.digits
+    passwort_liste = [random.choice(zeichen) for _ in range(laenge)]
+    return ''.join(passwort_liste)
 
 def bewertung_passwort_staerke(passwort: str) -> str:
     """
@@ -848,6 +853,33 @@ def bewertung_passwort_staerke(passwort: str) -> str:
     >>> bewertung_passwort_staerke("Abc123!@#")
     'Stark'
     """
+    punkte = 0
+    
+    # 1. Prüfe die Länge des Passworts und verteile Punkte
+    if len(passwort) >= 12:
+        punkte += 2
+    elif len(passwort) >= 8:
+        punkte += 1
+        
+    # 2. Prüfe auf Großbuchstaben
+    if any(c.isupper() for c in passwort):
+        punkte += 1
+        
+    # 3. Prüfe auf Zahlen
+    if any(c.isdigit() for c in passwort):
+        punkte += 1
+        
+    # 4. Prüfe auf Sonderzeichen
+    if any(c in string.punctuation for c in passwort):
+        punkte += 1
+        
+    # 6. Bewertung ermitteln
+    if punkte <= 2:
+        return "Schwach"
+    elif punkte <= 4:
+        return "Mittel"
+    else:
+        return "Stark"
 
 
 # ==================================================================================
